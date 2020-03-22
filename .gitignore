@@ -221,3 +221,6 @@ fabric.properties
 # 3D Images
 *.3dm
 *.max
+
+### Additional
+ubuntu-bionic-18.04-cloudimg-console.log
