@@ -13,3 +13,7 @@ echo -e "\n--------------------- Finished installing Apache. -------------------
 echo -e "\n--------------------- Installing MySQL... ---------------------\n"
 apt-get install -y mysql-server
 echo -e "\n--------------------- Finished installing MySQL. ---------------------\n"
+
+echo -e "\n--------------------- Installing PHP... ---------------------\n"
+apt-get install -y php libapache2-mod-php php-mysql
+echo -e "\n--------------------- Finished installing PHP. ---------------------\n"
