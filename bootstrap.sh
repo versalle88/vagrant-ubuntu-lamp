@@ -17,3 +17,7 @@ echo -e "\n--------------------- Finished installing MySQL. --------------------
 echo -e "\n--------------------- Installing PHP... ---------------------\n"
 apt-get install -y php libapache2-mod-php php-mysql
 echo -e "\n--------------------- Finished installing PHP. ---------------------\n"
+
+echo -e "\n--------------------- Installing Composer... ---------------------\n"
+apt-get install -y composer
+echo -e "\n--------------------- Finished installing Composer. ---------------------\n"
