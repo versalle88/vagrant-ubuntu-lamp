@@ -22,3 +22,14 @@ echo -e "\n--------------------- Installing Composer... ---------------------\n"
 apt-get install -y curl php-cli php-mbstring git unzip
 apt-get install -y composer
 echo -e "\n--------------------- Finished installing Composer. ---------------------\n"
+
+echo -e "\n--------------------- Setting up Virtual Hosts... ---------------------\n"
+cp /vagrant/example.com.test.conf /etc/apache2/sites-available/
+a2ensite example.com.test.conf
+systemctl restart apache2
+echo -e "\n--------------------- Finished setting up Virtual Hosts. ---------------------\n"
+
+echo -e "\n--------------------- Enabling mod_rewrite... ---------------------\n"
+a2enmod rewrite
+systemctl restart apache2
+echo -e "\n--------------------- Finished enabling mod_rewrite. ---------------------\n"
