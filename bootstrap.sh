@@ -17,3 +17,15 @@ echo -e "\n--------------------- Finished installing MySQL. --------------------
 echo -e "\n--------------------- Installing PHP... ---------------------\n"
 apt-get install -y php libapache2-mod-php php-mysql
 echo -e "\n--------------------- Finished installing PHP. ---------------------\n"
+
+echo -e "\n--------------------- Installing Composer... ---------------------\n"
+apt-get install -y php-cli unzip
+apt-get install -y composer
+echo -e "\n--------------------- Finished installing Composer. ---------------------\n"
+
+echo -e "\n--------------------- Setting up Virtual Hosts... ---------------------\n"
+cp /vagrant/example.com.test.conf /etc/apache2/sites-available/
+a2ensite example.com.test.conf
+a2dissite 000-default
+systemctl restart apache2
+echo -e "\n--------------------- Finished setting up Virtual Hosts. ---------------------\n"
