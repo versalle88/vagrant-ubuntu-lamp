@@ -29,3 +29,8 @@ a2ensite example.com.test.conf
 a2dissite 000-default
 systemctl restart apache2
 echo -e "\n--------------------- Finished setting up Virtual Hosts. ---------------------\n"
+
+echo -e "\n--------------------- Enabling mod_rewrite... ---------------------\n"
+a2enmod rewrite
+systemctl restart apache2
+echo -e "\n--------------------- Finished enabling mod_rewrite. ---------------------\n"
